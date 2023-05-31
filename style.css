@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    /* Colours */
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--Charcoal-Grey);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right > #mobileImage {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 600px){
+    .right > #mobileImage {
+        display: none;
+    }
+}
+
+.mainContainer {
+    background-color: var(--White);
+    display: flex;
+    max-width: 50%;
+    max-height: 68.5%;
+    border-radius: 15px;
+    padding: 15px 0px 15px 15px;
+}
+
+.left {
+    max-width: 55%;
+    max-height: 100%;
+    padding: 0px 10px 0px 20px;
+}
+
+.stay {
+    font-weight: 700;
+}
+
+.stay, .join, .ticks > p {
+    color: var(--Dark-Slate-Grey);
+}
+
+.join, .ticks > p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.left > .ticks {
+    display: flex;
+    gap: 5px;
+}
+
+.left > .ticks > img {
+    width: 6%;
+}
+
+.abvEmail {
+    font-size: 10px;
+    color: var(--Dark-Slate-Grey);
+}
+
+.left > input {
+    width: 89%;
+    padding: 6px 0px 6px 12px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.left > button {
+    font-size: 13px;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    border: none;
+    width: 95.5%;
+    margin: 14px 0px 14px 0px;
+    padding: 7px 0px 7px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.left > button:hover {
+    background-color: var(--Tomato);
+}
+
+.left > button:active {
+    background-color: hsl(4, 83%, 42%);
+}
+
+.right {
+    max-width: 45%;
+    max-height: 100%;
+}
+
+.right > #desktopImage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+@media screen and (max-width: 599px){
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .right > #desktopImage {
+        display: none;
+    }
+
+    .mainContainer {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 0px;
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    .mainContainer > .left, .mainContainer > .right {
+        max-width: 100%;
+    }
+
+    .mainContainer > .left {
+        padding: 0px 50px 20px 50px;
+    }
+}
+
+/* Success container styling */
+
+.success {
+    display: none;
+}
+
+.success {
+    background-color: var(--White);
+    max-width: 27%;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+@media screen and (max-width: 599px){
+    .success {
+        max-width: 100%;
+        padding: 200px 40px 200px 40px;
+        border-radius: 0px;
+    }
+}
+
+.success > img {
+    max-width: 12%;
+}
+
+.success > button {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 17px;
+    margin-bottom: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    cursor: pointer;
+}
+
+.success > button:hover {
+    background-color: var(--Tomato);
+}
+
+.success > button:active {
+    background-color: hsl(4, 83%, 42%);
+}
+
+.success > h1 {
+    color: var(--Dark-Slate-Grey);
+    font-weight: 700;
+}
+
+.success > p {
+    font-size: 16px;
+    color: var(--Dark-Slate-Grey);
+}
+
+.success ul {
+    font-size: 16px;
+    list-style-type: none;
+    font-weight: bold;
+    color: var(--Dark-Slate-Grey);
+}
+
+.success > span {
+    color: var(--Dark-Slate-Grey);
+}
+
+@media screen and (max-width: 599px){
+    .success {
+        max-width: 100%;
+        padding: 150px 40px 15px 40px;
+        border-radius: 0px;
+    }
+    .success > button {
+        margin-top: 200px;
+    }
+}
